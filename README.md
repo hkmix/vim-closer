@@ -1,23 +1,12 @@
 # vim-closer
 
+Forked version that removes semicolon operations and enables it for all buffers by default.
+
 **Closes brackets.** Perfect companion to [vim-endwise]. Basically, a more conservative version of [auto-pairs] that only works when you press Enter.
-
-----
-
-![](https://raw.githubusercontent.com/rstacruz/vim-closer/gh-pages/closer.gif)
-
-----
-
-[![Status](http://img.shields.io/travis/rstacruz/vim-closer/master.svg)](https://travis-ci.org/rstacruz/vim-closer/ "See test builds")
-
-[auto-pairs]: https://github.com/jiangmiao/auto-pairs
-[vim-endwise]: https://github.com/tpope/vim-endwise
-
-<br>
 
 ## What
 
-Closings are automatically inserted after pressing <kbd>Enter ⏎</kbd>. It supports languages that have `(`, `[`, and `{` brackets.
+Closings are automatically inserted after pressing <kbd>Enter ⏎</kbd>. It supports `(`, `[`, and `{` brackets by default.
 
 ```css
 .section {⏎
@@ -41,22 +30,6 @@ describe('test', function () {
 })
 ```
 
-Semicolons are automatically added if it makes sense, and only if another line in the buffer ends in `;`.
-
-```js
-var x = 1;
-setImmediate(function () {⏎
-```
-
-```js
-var x = 1;
-setImmediate(function () {
-  |
-});
-```
-
-<br>
-
 ## Install
 
 When using [vim-plug], add this to your `~/.vimrc`:
@@ -64,16 +37,8 @@ When using [vim-plug], add this to your `~/.vimrc`:
 [vim-plug]: https://github.com/junegunn/vim-plug
 
 ```vim
-Plug 'rstacruz/vim-closer'
+Plug 'hkmix/vim-closer'
 ```
-
-<br>
-
-## By the way
-
-Do you edit CSS often? Of course you do. Let me help you make that [a better experience.](http://ricostacruz.com/vim-hyperstyle/)
-
-<br>
 
 ## Thanks
 
